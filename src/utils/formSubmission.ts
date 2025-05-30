@@ -14,7 +14,7 @@ export const submitToGoogleSheet = async (data: FormData): Promise<boolean> => {
   const sheetUrl = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
   
   try {
-    const response = await fetch(sheetUrl, {
+     await fetch(sheetUrl, {
       method: 'POST',
       mode: 'no-cors', // Important for CORS issues with Google Scripts
       headers: {

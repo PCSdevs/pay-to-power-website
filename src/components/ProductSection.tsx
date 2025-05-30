@@ -1,6 +1,6 @@
-import { BarChart4, ChevronRight, CircuitBoard, Clock, Code, Cpu, Lock, PlugZap, WifiOff, Zap } from 'lucide-react';
-import { theme } from '../theme';
+import { BarChart4, Clock, Code, Cpu, Lock, PlugZap, WifiOff, Zap } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { theme } from '../theme';
 
 const ProductSection = () => {
   const [animate, setAnimate] = useState(false);
