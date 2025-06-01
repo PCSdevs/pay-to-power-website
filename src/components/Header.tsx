@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { theme } from '../theme';
 
-const Header = () => {
+const Header = ({setIsOrderFormOpen}:any) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -21,10 +21,9 @@ const Header = () => {
   };
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-[#121212]/95 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-4'
-      }`}
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#121212]/95 backdrop-blur-md shadow-md py-2' : 'bg-transparent py-4'
+        }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link to="/" className="flex items-center">
@@ -35,20 +34,24 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="text-white hover:text-[#FF3333] transition-colors">Home</Link>
+          <Link to="/" className="text-white hover:text-[#FF3333] transition-colors"
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          >Home</Link>
           <Link to="/#product" className="text-white hover:text-[#FF3333] transition-colors">Product</Link>
           <Link to="/#pricing" className="text-white hover:text-[#FF3333] transition-colors">Pricing</Link>
-          <Link to="/#about" className="text-white hover:text-[#FF3333] transition-colors">About</Link>
-          <button 
+          {/* <Link to="/#about" className="text-white hover:text-[#FF3333] transition-colors">About</Link> */}
+          <button
             className="px-4 py-2 rounded bg-[#FF3333] text-white hover:bg-[#FF5555] transition-colors"
-            onClick={() => window.location.href = "/#order"}
+            onClick={() => setIsOrderFormOpen(true)}
           >
             Order Now
           </button>
         </nav>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="md:hidden text-white"
           onClick={toggleMobileMenu}
         >
@@ -64,7 +67,7 @@ const Header = () => {
             <Link to="/#product" className="text-white hover:text-[#FF3333] transition-colors" onClick={() => setMobileMenuOpen(false)}>Product</Link>
             <Link to="/#pricing" className="text-white hover:text-[#FF3333] transition-colors" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
             <Link to="/#about" className="text-white hover:text-[#FF3333] transition-colors" onClick={() => setMobileMenuOpen(false)}>About</Link>
-            <button 
+            <button
               className="px-4 py-2 rounded bg-[#FF3333] text-white hover:bg-[#FF5555] transition-colors text-left"
               onClick={() => {
                 window.location.href = "/#order";

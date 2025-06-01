@@ -6,7 +6,7 @@ const HeroSection = () => {
   const [isOrderFormOpen, setIsOrderFormOpen] = useState(false);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden" id="hero">
+    <section className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden" id="home">
       {/* Background with gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#121212] to-[#222222] z-0"></div>
       

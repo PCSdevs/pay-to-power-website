@@ -7,10 +7,10 @@ import ProductSection from './components/ProductSection';
 import PricingSection from './components/PricingSection';
 import FooterSection from './components/FooterSection';
 import OrderForm from './components/OrderForm';
+import ScrollToHashElement from './components/ScrollToHashElement';
 
 export function App() {
   const [isOrderFormOpen, setIsOrderFormOpen] = useState(false);
-  console.log("🚀 ~ App ~ isOrderFormOpen:", isOrderFormOpen)
   const [selectedPlan, setSelectedPlan] = useState<'Standard' | 'Pro'>('Standard');
 
   useEffect(() => {
@@ -33,7 +33,8 @@ export function App() {
   return (
     <Router>
       <div className="bg-[#121212] min-h-screen text-white">
-        <Header />
+        <Header  setIsOrderFormOpen={setIsOrderFormOpen}/>
+        <ScrollToHashElement />
         
         <Routes>
           <Route path="/" element={
