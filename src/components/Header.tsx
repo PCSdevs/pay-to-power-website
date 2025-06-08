@@ -40,7 +40,7 @@ const Header = ({setIsOrderFormOpen}:any) => {
             }}
           >Home</Link>
           <Link to="/#product" className="text-white hover:text-[#FF3333] transition-colors">Product</Link>
-          <Link to="/#pricing" className="text-white hover:text-[#FF3333] transition-colors">Pricing</Link>
+          <Link to="/#pricing" className="text-white hover:text-[#FF3333] transition-colors">Quote</Link>
           {/* <Link to="/#about" className="text-white hover:text-[#FF3333] transition-colors">About</Link> */}
           <button
             className="px-4 py-2 rounded bg-[#FF3333] text-white hover:bg-[#FF5555] transition-colors"
