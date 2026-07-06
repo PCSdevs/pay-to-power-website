@@ -47,7 +47,7 @@ const PricingSection = ({ onOrderClick }: PricingSectionProps) => {
             Choose the plan that fits your business needs and start transforming one-time sales into recurring revenue.
           </p>
           
-          <div className="mt-8 inline-flex items-center p-1 bg-[#222222] rounded-full">
+          {/* <div className="mt-8 inline-flex items-center p-1 bg-[#222222] rounded-full">
             <button
               className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${!isAnnual ? 'bg-[#FF3333] text-white' : 'text-gray-400 hover:text-white'}`}
               onClick={() => setIsAnnual(false)}
@@ -60,7 +60,7 @@ const PricingSection = ({ onOrderClick }: PricingSectionProps) => {
             >
               Annual <span className="text-xs">(Save 15%)</span>
             </button>
-          </div>
+          </div> */}
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -73,10 +73,10 @@ const PricingSection = ({ onOrderClick }: PricingSectionProps) => {
               >
                 Standard
               </h3>
-              <div className="mt-4 flex items-baseline">
+              {/* <div className="mt-4 flex items-baseline">
                 <span className="text-4xl font-bold text-white">₹{isAnnual ? '679' : '799'}</span>
                 <span className="text-gray-400 ml-2">/month</span>
-              </div>
+              </div> */}
               {isAnnual && (
                 <div className="text-sm text-[#FF3333] mt-2">Billed annually (₹8,148/year)</div>
               )}
