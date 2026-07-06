@@ -7,7 +7,7 @@ interface PricingSectionProps {
 }
 
 const PricingSection = ({ onOrderClick }: PricingSectionProps) => {
-  const [isAnnual, setIsAnnual] = useState(false);
+  // const [isAnnual, setIsAnnual] = useState(false);
 
   const standardFeatures = [
     "Hardware module",
@@ -76,10 +76,10 @@ const PricingSection = ({ onOrderClick }: PricingSectionProps) => {
               {/* <div className="mt-4 flex items-baseline">
                 <span className="text-4xl font-bold text-white">₹{isAnnual ? '679' : '799'}</span>
                 <span className="text-gray-400 ml-2">/month</span>
-              </div> */}
+              </div> 
               {isAnnual && (
                 <div className="text-sm text-[#FF3333] mt-2">Billed annually (₹8,148/year)</div>
-              )}
+              )} */}
               <p className="mt-4 text-gray-400">
                 Hardware + Dashboard
               </p>
@@ -114,13 +114,13 @@ const PricingSection = ({ onOrderClick }: PricingSectionProps) => {
               >
                 Pro
               </h3>
-              <div className="mt-4 flex items-baseline">
+              {/* <div className="mt-4 flex items-baseline">
                 <span className="text-4xl font-bold text-white">₹{isAnnual ? '1,019' : '1,199'}</span>
                 <span className="text-gray-400 ml-2">/month</span>
               </div>
               {isAnnual && (
                 <div className="text-sm text-[#FF3333] mt-2">Billed annually (₹12,228/year)</div>
-              )}
+              )} */}
               <p className="mt-4 text-gray-400">
                 Hardware + Dashboard + API Integration
               </p>
